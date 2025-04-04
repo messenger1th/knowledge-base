@@ -1,10 +1,11 @@
 from langchain.chat_models.base import SimpleChatModel
 from langchain.schema import ChatMessage, HumanMessage, AIMessage, SystemMessage
 from typing import List
+from llms.secrete import get_api_key
 import requests
 
 class DeepSeekLLM(SimpleChatModel):
-    api_key: str
+    api_key: str = get_api_key("deepseek-api-key")
     url: str = "https://api.deepseek.com/chat/completions"  # ✅ DeepSeek 正确路径
     model: str = "deepseek-chat"
 

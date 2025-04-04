@@ -3,10 +3,11 @@ from langchain.schema import ChatMessage, HumanMessage, AIMessage, SystemMessage
 from typing import List
 import requests
 from ai_gateway_py_sdk.hmac_auth.client import HmacAuthClient
+from secrete import get_api_key
 
 class DeepSeekLLM(SimpleChatModel):
-    access_key: str
-    secret_key: str
+    access_key: str = get_api_key("bili-access-key")
+    secret_key: str = get_api_key("bili-secret-key")
     url: str = "http://ai-gateway.bilibili.co/v1/chat/completions"
     model: str = "deepseek-r1"
     source: str = "ali"
