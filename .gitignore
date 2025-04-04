@@ -1,4 +1,5 @@
 venv/*
-api.txt
+secret.json
 idea/
 .idea/
+secret.json

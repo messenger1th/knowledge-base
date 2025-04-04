@@ -38,4 +38,4 @@ class DeepSeekLLM(SimpleChatModel):
         return response.json()["choices"][0]["message"]["content"]
 
     def _llm_type(self) -> str:
-        return "deepseek-chat"
+        return self.model
