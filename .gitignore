@@ -1,5 +1,6 @@
+test.py
 venv/*
-secret.json
 idea/
 .idea/
-secret.json
+llms/secrete.json
+

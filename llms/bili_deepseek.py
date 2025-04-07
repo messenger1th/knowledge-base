@@ -3,7 +3,7 @@ from langchain.schema import ChatMessage, HumanMessage, AIMessage, SystemMessage
 from typing import List
 import requests
 from ai_gateway_py_sdk.hmac_auth.client import HmacAuthClient
-from secrete import get_api_key
+from llms.secrete import get_api_key
 
 class DeepSeekLLM(SimpleChatModel):
     access_key: str = get_api_key("bili-access-key")
